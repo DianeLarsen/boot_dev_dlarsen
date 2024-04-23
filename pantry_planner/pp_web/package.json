@@ -1,0 +1,26 @@
+{
+  "name": "pp_web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "dotenv": "^16.4.5",
+    "html-react-parser": "^5.1.10",
+    "next": "^14.2.2",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.3"
+  }
+}
