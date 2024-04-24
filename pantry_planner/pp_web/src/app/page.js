@@ -1,6 +1,6 @@
 import Link from "next/link";
 import "dotenv/config";
-import MealList from "../components/meallist/MealList";
+
 
 const API_KEY = process.env.API_KEY;
 
@@ -12,19 +12,17 @@ async function getRecipes(ingredients) {
   )
     const res = await response.json()
     const mapedRed = res.filter(recipe => recipe.missedIngredientCount < 4);
-    console.log(mapedRed)
-    return res
+    // console.log(mapedRed)
+    return mapedRed
 } catch (error){
     console.log(error)
 }
 }
 
-const Page = async () => {
-const ingredients = 'apples,+flour,+sugar'
-  const recipes = await getRecipes(ingredients);
-
+export default function Home() {
   return (
-    <div>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+     <div>
       <h3>My Homepage</h3>
       <ul>
         {recipes && recipes.map((data, index) => {return (
@@ -36,7 +34,6 @@ const ingredients = 'apples,+flour,+sugar'
       </ul>
 
     </div>
+    </main>
   );
-};
-
-export default Page;
+}
